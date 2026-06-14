@@ -1,0 +1,32 @@
+I am launching a small browser gaming brand called Uhzmi Games. I want a website
+where people open a page and play free HTML5 games right in the browser, with no
+download and no install.
+
+I need the front end and a small local backend only. There is no login, no payment,
+and no cloud server in this job. The site has these pages: a home page, category
+pages, a game play page, a search results page, and an admin panel.
+
+The look is dark with a violet accent. The background shows an animated field of
+moving dots from reactbits.dev. The header logo says UHZMI GAMES using an animated
+ASCII text component from reactbits.dev. All text uses the Inter font from Google
+Fonts.
+
+The home page shows a Top 5 Most Played carousel at the top, then one horizontal
+carousel row per category, then a full grid of all games below that. Each game card
+has a 16 by 9 cover image, a title, an optional badge ribbon, and a star rating and
+play count below the title. Hovering a card scales it up, deepens the shadow, fades
+in a dark overlay, and shows a white play icon, all in 200 milliseconds. On mobile,
+tapping a card goes directly to the game page with no hover effects.
+
+For games, the site loads 12 free license HTML5 games sourced from itch.io. Each
+game runs inside an iframe on the game play page. The play count for each game is
+stored in a local games.json file and increments each time a user starts a game via
+a small Node.js Express server.
+
+The site also has an admin panel at the local URL slash admin. The owner can add,
+edit, or delete game entries through a simple form. The form writes to games.json
+via the Express server. No login is needed because the panel is localhost only.
+
+At the end I want a zip of the full project, a README inside it with setup steps,
+JSON schema reference, and instructions for adding games both through the admin
+panel and by editing the JSON file directly.

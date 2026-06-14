@@ -1,0 +1,123 @@
+I am one person launching a browser gaming brand called Uhzmi Games. I want a
+locally hosted browser game website with an admin panel. Below is what I want
+and what I do not need.
+
+What I want:
+
+1. A React 18 and Vite front end with Tailwind CSS, a minimal Node.js Express
+   backend for the admin panel only, and all game data stored in local JSON files
+   with no external database.
+
+2. These pages: HomePage, CategoryPage, GamePage, SearchResultsPage, AdminPage,
+   and static content for About, FAQ, Terms of Use, Privacy Policy, and Contact
+   accessible from the footer.
+
+3. A dark color palette using these exact hex values only: page background
+   0A0E1A, card background 141829, primary text FFFFFF, secondary text 8892B0,
+   accent 7C3AED, HOT badge EF4444, New badge 22C55E, Top Rated badge F59E0B,
+   card hover overlay rgba 0 0 0 at 0.55 opacity.
+
+4. Inter from Google Fonts at weight 700 for section headings at 24px, weight
+   600 for card titles at 16px, weight 500 for nav links at 14px, weight 400 for
+   body text at 14px and metadata at 12px.
+
+5. A sticky header on all pages containing the animated AsciiText logo UHZMI
+   GAMES from reactbits.dev on the left, primary nav links Games, Categories,
+   New, Popular in the center, a search bar with live autocomplete on the right,
+   and a background music toggle button at the far right.
+
+6. A DotField animated background from reactbits.dev fixed behind all page
+   content across the entire site.
+
+7. A left sidebar on desktop listing all 12 game categories with small icons.
+   The active category is shown in the accent color. On mobile the sidebar
+   collapses to a hamburger menu that slides in from the left.
+
+8. A home page with three sections from top to bottom: a Top 5 Most Played
+   horizontal carousel showing the 5 games with the highest play count, one
+   horizontal carousel row per category with a heading and a See all link, and a
+   Browse All Games grid below showing all games sorted by newest first.
+
+9. Game cards with a 16 by 9 cover image, title in white Inter weight 600, an
+   optional corner badge ribbon for New or HOT or Top Rated, and a metadata row
+   showing star rating and play count. On mouse hover over 200 milliseconds: scale
+   to 1.05, grow the drop shadow, raise z index so the card overlaps neighbors,
+   fade in a dark overlay, show a white centered play icon, and shift the title
+   to the accent color. On mouse leave everything reverses over the same 200
+   milliseconds with no snap. On mobile and touch screens hover effects are off
+   and tapping goes straight to the game page.
+
+10. Category pages accessible from the sidebar or the See all links, showing a
+    full grid filtered to that category with sort controls for Most Popular,
+    Newest First, Oldest First, A to Z, and Z to A, plus tag filtering and a
+    Load More button.
+
+11. A search bar with a live autocomplete dropdown debounced at 250 milliseconds,
+    showing matching game titles with small thumbnails. Enter or clicking a result
+    navigates to the game page. Arrow keys move through results, Escape closes
+    the dropdown.
+
+12. A game play page at the URL pattern slash games slash slug, with a large
+    central viewport containing a loading spinner, a click to play splash overlay,
+    a fullscreen toggle using the browser Fullscreen API, and a report button. Below
+    the viewport: game title, author name, description, and controls. Below that:
+    a related games grid of 6 to 8 games from the same category.
+
+13. Twelve HTML5 games sourced from itch.io under MIT, GPL, CC0, or free to use
+    licenses, one per category: Action, Racing, Adventure, Puzzle, Sports, Arcade,
+    Shooting, Strategy, Simulation, Board Games, Music, Educational. Each game runs
+    from its own folder under slash games slash slug slash index.html inside an
+    iframe on the game play page.
+
+14. A play count system where clicking to start a game sends a request to the local
+    Express server, which increments the playCount field in games.json. The Top 5
+    carousel reads from this on every page load.
+
+15. An admin panel at the local URL slash admin with three functions: an Add form
+    that writes a new entry to games.json, an Edit function that opens the same form
+    prefilled, and a Delete button that removes the entry from games.json without
+    touching the game folder or cover image on disk. The form submits via POST to
+    the Express server. No authentication is needed because it is localhost only.
+
+16. A multi column footer with links to About, FAQ, Terms of Use, Privacy Policy,
+    and Contact, each opening their respective content. Copyright line below the
+    columns reads: (c) 2026 Uhzmi Games. All rights reserved.
+
+17. Two free license audio files: a short card click sound of 0.1 to 0.3 seconds
+    under CC0 from Freesound.org placed at public slash sounds slash click.mp3, and
+    a looping background music track under free license from Mixkit.co placed at
+    public slash sounds slash bgm.mp3. The header toggle turns background music on
+    or off and the preference is saved in localStorage. Default state is off.
+
+18. Responsive design with no horizontal scroll on mobile. The game grid reflows
+    to 2 columns on small screens. Tap targets are at least 44px. All interactive
+    elements have hover, active, and focus states as specified.
+
+19. The exact folder structure specified in the PRD with no deviations, including
+    all components, pages, services, hooks, data files, and the Express server.js.
+
+20. A README.md covering setup commands, JSON schema reference, an Adding a New
+    Game section covering both the admin panel method and the manual JSON editing
+    method, troubleshooting tips, and a Licenses and Resources section listing all
+    12 games with source URLs and license types, cover image sources, sound file
+    sources, and attributions for Inter, ReactBits components, and Lucide React.
+
+21. A zip named uhzmi-games.zip containing the full project folder ready to
+    extract and run with npm install and npm run dev.
+
+Not needed:
+
+1. No user accounts, registration, login, or authentication of any kind.
+2. No external database.
+3. No comments, ratings, likes, favorites, or social features.
+4. No push notifications, email notifications, or analytics dashboard.
+5. No video uploads or video content.
+6. No payment processing or monetization features.
+7. No iOS or Android app.
+8. No public production deployment or hosting setup.
+9. No SEO metadata or sitemaps.
+10. No third party ads.
+11. No uploading of game files through the admin panel. The admin panel edits
+    JSON only. Game files are added manually via the file system.
+12. No CMS, WordPress, or database driven content management.
+13. No Flash or Ruffle emulation for legacy SWF games.
