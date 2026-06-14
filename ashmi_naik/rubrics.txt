@@ -1,37 +1,40 @@
 1. The submission contains a project archive named uhzmi-games.zip.
-2. The archive extracts to the folder structure described in the requirements.
-3. README.md sits in the project root, documenting setup, the games.json schema, the admin panel method for adding a game, the manual method for adding a game.
-4. README.md includes a licenses section listing every game with its source URL plus license type, the click.mp3 source, the bgm.mp3 source, the Inter font, the reactbits DotField component, the reactbits AsciiText component, the Lucide React icons.
-5. The file src/data/games.json contains exactly 12 game entries, each including the fields id, title, slug, cover, category, tags, description, controls, gameUrl, badge, author, source, license, addedDate, playCount.
-6. The file src/data/categories.json contains exactly the 12 categories with the ids action, racing, adventure, puzzle, sports, arcade, shooting, strategy, simulation, board, music, educational.
-7. The file src/data/sounds.json maps the filenames click.mp3, bgm.mp3.
-8. The games folder contains 12 subfolders, each holding an index.html at its root that runs with no external server.
-9. The public/covers folder contains 12 cover images, each a 640 by 360 pixel JPG.
-10. The public/sounds folder contains the files click.mp3, bgm.mp3.
-11. The file server.js sits in the project root, running a Node.js Express server that reads games.json, then writes updates back to it.
-12. Running npm install, then npm run dev, starts the site on localhost with zero errors.
-13. The interface uses only this palette: page background 0A0E1A; cards, sidebar, content panels 141829; primary text FFFFFF; secondary text 8892B0; accent 7C3AED for active nav links, buttons, the play icon; HOT badge EF4444; New badge 22C55E; Top Rated badge F59E0B; card hover overlay rgba 0 0 0 at 0.55 opacity.
-14. The interface uses the Inter font with this type scale: section headings bold 24px; card titles semibold 16px; nav links medium 14px; body text regular 14px; metadata regular 12px.
+2. The project root includes a README.md.
+3. The file src/data/games.json contains 12 game entries.
+4. The file src/data/categories.json contains the 12 categories.
+5. The games folder contains 12 game subfolders.
+6. The public/covers folder contains 12 cover images sized 640 by 360 pixels in JPG format.
+7. The project root contains a server.js running a Node.js Express server for the admin panel.
+8. Running npm install, then npm run dev, starts the site on localhost with zero errors.
+9. The page background uses the hex color 0A0E1A.
+10. Game cards, the sidebar, content panels use the hex color 141829.
+11. Primary text uses the hex color FFFFFF.
+12. Secondary text uses the hex color 8892B0.
+13. The accent hex color 7C3AED is used for active nav links, button backgrounds, the play icon.
+14. All site text uses the Inter font family.
 15. The header stays pinned at the top while the main content scrolls underneath it.
 16. The header logo renders the text UHZMI GAMES using the animated AsciiText component.
 17. A fixed DotField animated background sits behind all page content.
-18. The left sidebar lists all 12 categories, each with an icon, highlighting the active category in the accent color.
-19. The homepage shows a Top 5 Most Played row as a carousel with arrow controls on each side.
-20. The homepage shows one carousel row per category.
-21. The homepage Browse All Games section shows every game in a wrapped grid sorted by newest first by default.
-22. Every game card cover keeps a 16:9 aspect ratio.
-23. Hovering a game card scales it to 1.05 over a 200ms transition, fading in a dark overlay with a centered white play triangle; the card returns to its original scale on mouse leave.
-24. On a touch device, tapping a card opens the game page with no hover effect.
-25. Typing in the header search bar opens a live autocomplete dropdown showing matching game titles, each with a thumbnail.
-26. Clicking a game card opens its game page at the URL pattern /games/[slug], loading the game inside an iframe.
-27. The game play page shows a breadcrumb of Home, category name, game title, plus a related games grid of 6 to 8 games.
-28. Starting a game increases that game playCount by 1 through the Express server, so the Top 5 row reflects the highest play counts.
+18. The left sidebar lists all 12 categories, each with an icon.
+19. The sidebar highlights the active category in the accent color.
+20. The homepage shows a Top 5 Most Played carousel, one carousel row per category, a Browse All Games grid of every game.
+21. Every game card cover keeps a 16:9 aspect ratio.
+22. Hovering a game card scales it to 1.05 over a 200ms transition.
+23. Hovering a game card fades in a dark overlay over the thumbnail.
+24. Typing in the header search bar opens a live autocomplete dropdown.
+25. Clicking a game card opens its game page at the URL pattern /games/[slug].
+26. The game loads inside an iframe on the game page.
+27. Starting a game increases that game playCount by 1 through the Express server.
+28. The Top 5 row reflects the highest play counts.
 29. Category pages provide the five sort options Most Popular, Newest First, Oldest First, A to Z, Z to A.
 30. Category pages provide a tag filter that shows games carrying the clicked tag.
-31. The admin panel at /admin can add a new game, edit an existing game, delete a game.
-32. Each admin change is written to games.json.
-33. Clicking a game card plays a click sound.
-34. The header has a background music toggle that defaults to off, with the preference persisting across a page refresh using localStorage.
-35. On a mobile viewport the grid reflows to 2 columns, with the sidebar collapsing into a hamburger menu that slides in from the left.
-36. The footer shows the five sections About, FAQ, Terms of Use, Privacy Policy, Contact.
-37. The footer shows a copyright line reading exactly (c) 2026 Uhzmi Games. All rights reserved.
+31. The admin panel at /admin can add a new game.
+32. The admin panel can edit an existing game.
+33. The admin panel can delete a game.
+34. Each admin change is written to games.json.
+35. Clicking a game card plays a click sound.
+36. The header includes a background music toggle that defaults to off.
+37. On a mobile viewport the grid reflows to 2 columns.
+38. On a mobile viewport the sidebar collapses into a hamburger menu that slides in from the left.
+39. The footer shows the five sections About, FAQ, Terms of Use, Privacy Policy, Contact.
+40. The footer shows a copyright line reading exactly (c) 2026 Uhzmi Games. All rights reserved.
